@@ -19,13 +19,25 @@ GEM
     arel (4.0.2)
     atomic (1.1.14)
     builder (3.1.4)
+    ffi (1.9.3)
     i18n (0.6.9)
+    listen (1.0.3)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
+      rb-kqueue (>= 0.2)
     minitest (4.7.5)
     multi_json (1.8.4)
     rack (1.5.2)
     rack-protection (1.5.2)
       rack
     rake (10.1.1)
+    rb-fsevent (0.9.4)
+    rb-inotify (0.9.3)
+      ffi (>= 0.5.0)
+    rb-kqueue (0.2.2)
+      ffi (>= 0.5.0)
+    rerun (0.8.2)
+      listen (~> 1.0.3)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -47,7 +59,9 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  activesupport
   rake
+  rerun
   sinatra
   sinatra-activerecord
   sinatra-jsonp

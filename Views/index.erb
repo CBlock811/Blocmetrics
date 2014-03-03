@@ -1,11 +1,30 @@
 <html>
   <head>
-
-    <script type="text/javascript" src="Blocmetrics/Chart.js"></script>
   </head>
   <body>
-
-
-
+    <table>
+      <% @events.each do |event| %>
+      <tr>
+        <td>
+          <%= event.name %>
+        </td>
+        <td>
+          <%= event.id %>
+        </td>
+        <td>
+          <ul> Properties
+          <% event.event_properties.each do |e| %>
+            <li> <%= e.value %>, 
+            <%= e.created_at %>, 
+            <%= e.name %> </li>
+          <% end %>
+        </ul>
+        </td>
+      </tr>
+      <% end %>
+    </table>
   </body>
 </html>
+
+
+<script type="text/javascript" src="Blocmetrics/Chart.js"></script>
